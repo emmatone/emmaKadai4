@@ -30,7 +30,7 @@ struct ContentView: View {
             content
                 .frame(width: 100, height: 40)
                 .background(color)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .clipShape(Capsule())
                 .foregroundColor(.white)
         }
     }
@@ -39,7 +39,7 @@ struct ContentView: View {
         VStack(spacing: 15) {
             Text("課題4\n数字をカウントアップするアプリ")
                 .font(.headline)
-            
+
             // カウント表示
             Text("\(counter)")
 
