@@ -23,7 +23,7 @@ struct ContentView: View {
     }
 
     // ボタンのスタイル定義
-    struct countButton: ViewModifier {
+    struct CountButton: ViewModifier {
         let color: Color
 
         func body(content: Content) -> some View {
@@ -46,13 +46,13 @@ struct ContentView: View {
             // カウントアップボタン
             Button(action: countUp) {
                 Text("+1")
-                    .modifier(countButton(color: .blue))
+                    .modifier(CountButton(color: .blue))
             }
 
             // クリアボタン
             Button(action: countClear) {
                 Text("Clear")
-                    .modifier(countButton(color: .gray))
+                    .modifier(CountButton(color: .gray))
             }
 
             Spacer()
